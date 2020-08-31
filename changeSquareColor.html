@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basico Javascript</title>
+</head>
+
+<body>
+    
+    <button type="button" onclick="createSquare()"> + quadrado</button>
+    <button type="button" onclick="eraseSquare()"> - quadrado</button>
+    <!-- <div id="quadrado" onmouseover="changeColor()" style="width: 100px; height: 100px; background-color: rgb(255, 0, 0); border: solid rgb(0, 0, 255);"></div> -->
+
+    <script>
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+                return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+
+        function createSquare() {  
+            var divElement = document.createElement('div')  
+            divElement.style.width = '100px'
+            divElement.style.height = '100px'
+            divElement.style.backgroundColor = '#f00'
+            divElement.style.border = 'solid #0000FF'
+            divElement.setAttribute('class', 'quadrado')
+            divElement.setAttribute('onmouseover', 'changeColor()')
+            document.body.appendChild(divElement)
+        }
+
+        function eraseSquare() {
+            var divElement = document.querySelector('.quadrado')
+            document.body.removeChild(divElement)
+        }
+
+        function changeColor() {
+            var divElement = document.querySelector("div.quadrado")
+            // return divElement
+            console.log(divElement)
+            divElement.style.backgroundColor = newColor
+            // return divElement[divElement.length]
+            // for (let index = 0; index < divElement.length; index++) {
+                // const element = divElement[index];
+            
+            // }
+            
+        }
+        
+        // var elemento = changeColor()
+
+    </script>
+</body>
+</html>

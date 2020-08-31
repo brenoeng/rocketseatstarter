@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basico Javascript</title>
+</head>
+
+<body>
+    
+    <button type="button" onclick="createSquare()"> + quadrado</button>
+    <button type="button" onclick="eraseSquare()"> - quadrado</button>
+
+    <script>
+        
+        function createSquare() {  
+            var divElement = document.createElement('div')  
+            divElement.style.width = '100px'
+            divElement.style.height = '100px'
+            divElement.style.backgroundColor = '#f00'
+            divElement.style.border = 'solid #0000FF'
+            divElement.setAttribute('id', 'quadrado')
+            document.body.appendChild(divElement)
+        }
+
+        function eraseSquare() {
+            var divElement = document.querySelector('#quadrado')
+            document.body.removeChild(divElement)
+        }
+    </script>
+</body>
+</html>

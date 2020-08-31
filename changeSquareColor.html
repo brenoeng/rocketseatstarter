@@ -30,7 +30,7 @@
             divElement.style.backgroundColor = '#f00'
             divElement.style.border = 'solid #0000FF'
             divElement.setAttribute('class', 'quadrado')
-            divElement.setAttribute('onmouseover', 'changeColor()')
+            divElement.setAttribute('onmouseover', 'changeColor(this)')
             document.body.appendChild(divElement)
         }
 
@@ -39,20 +39,9 @@
             document.body.removeChild(divElement)
         }
 
-        function changeColor() {
-            var divElement = document.querySelector("div.quadrado")
-            // return divElement
-            console.log(divElement)
-            divElement.style.backgroundColor = newColor
-            // return divElement[divElement.length]
-            // for (let index = 0; index < divElement.length; index++) {
-                // const element = divElement[index];
-            
-            // }
-            
+        function changeColor(element) {
+            element.style.backgroundColor = newColor
         }
-        
-        // var elemento = changeColor()
 
     </script>
 </body>

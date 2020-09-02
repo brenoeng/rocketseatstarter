@@ -1,3 +1,5 @@
 # rocketseatstarterJS
 
-Aprendendo JS na trilha Starter da Rockeseat
+Learning Javascript from Rockeseat Starter track.
+
+https://app.rocketseat.com.br/starter

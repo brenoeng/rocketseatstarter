@@ -1,4 +1,4 @@
-# rocketseatstarterJS
+# rocketseatstarter
 
 Learning Javascript from Rockeseat Starter track.
 

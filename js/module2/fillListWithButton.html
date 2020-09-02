@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basico Javascript</title>
+</head>
+
+<body>
+    
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas", 'Breno']
+
+        var listElement = document.createElement('ul')
+        document.body.appendChild(listElement)
+
+        for (let index = 0; index < nomes.length; index++) {
+            var itemElement = document.createElement('li')
+            listElement.appendChild(itemElement)
+
+            var textElement = document.createTextNode(nomes[index])
+            itemElement.appendChild(textElement)
+        }
+
+        function adicionar() {
+            // Create tag input
+            var inputElement = document.querySelector('input')
+            // take the value inside input
+            var text = inputElement.value;
+            // create text with value input
+            var textElement = document.createTextNode(text)
+
+            var itemElement = document.createElement('li')
+            listElement.appendChild(itemElement)
+            itemElement.appendChild(textElement)
+            inputElement.value = ''
+        }
+        
+    </script>
+</body>
+</html>

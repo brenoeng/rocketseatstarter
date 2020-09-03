@@ -9,7 +9,6 @@
     
     <button type="button" onclick="createSquare()"> + quadrado</button>
     <button type="button" onclick="eraseSquare()"> - quadrado</button>
-    <!-- <div id="quadrado" onmouseover="changeColor()" style="width: 100px; height: 100px; background-color: rgb(255, 0, 0); border: solid rgb(0, 0, 255);"></div> -->
 
     <script>
 
@@ -30,17 +29,19 @@
             divElement.style.border = 'solid #0000FF'
             divElement.setAttribute('class', 'quadrado')
             divElement.setAttribute('onmouseover', 'changeColor(this)')
-            // divElement.setAttribute('onmouseleave', 'changeColor(this)')
             document.body.appendChild(divElement)
         }
 
         function eraseSquare() {
             var divElement = document.querySelector('.quadrado')
-            document.body.removeChild(divElement)
+            if (divElement === null) {
+                alert('Não existem quadrados para remover!')
+            } else {
+                document.body.removeChild(divElement)
+            }
         }
 
         function changeColor(element) {
-            console.log(element.style.backgroundColor)
             element.style.backgroundColor = getRandomColor()
         }
 
